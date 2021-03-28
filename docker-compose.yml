@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  nest_mongo_backend:
+    container_name: nest_mongo_backend
+    image: pyerx/nest-mongo:0.0.1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - EXTERNAL_PORT=3000
+      - MONGO_ATLAS_USER=zubair
+      - MONGO_ATLAS_PASSWORD=Pyerx123
+      - MONGO_ATLAS_DB=zubair
